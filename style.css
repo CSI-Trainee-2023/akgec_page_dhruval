@@ -298,3 +298,141 @@ button{
 .about-bottom h2{
     color: #E4B709;
 }
+
+.section-3{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #F7F5CA;
+}
+
+.section-3-head{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: top;
+    /* background-color: red; */
+   
+}
+
+.section-3-head h1{
+    font-size: 2.8vw;
+    font-family: InfriaSerif-Regular;
+}
+
+.line{
+    width: 80px;
+    height: 8px;
+    background-color: yellow;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card-section{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2%;
+}
+
+.card-1{
+    width: 28%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: InfriaSans-Regular;
+}
+
+.card-1 h1{
+    padding: 10px 0px 8px 10px;
+    height: 15%;
+}
+
+.card-1 h2{
+    padding-left: 10px;
+    font-size: 1.3vw;
+    color: #00000080;
+    height: 20%;
+}
+
+.readMore{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.readMore button{
+    background-color: white;
+    border: 2px solid #E4B709;
+}
+
+.card-1 img{
+    width: 100%;
+    height: 50%;
+}
+
+.card-2{
+    width: 28%;
+    height: 80%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: InfriaSans-Regular
+}
+
+.card-2 img{
+    width: 100%;
+    height: 50%;
+}
+
+.card-2 h1{
+    padding: 10px 0px 8px 10px;
+    height: 15%;
+}
+
+.card-2 h2{
+    padding-left: 10px;
+    font-size: 1.3vw;
+    color: #00000080;
+    height: 20%;
+}
+
+.card-3{
+    width: 28%;
+    height: 70%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: InfriaSans-Regular
+}
+
+.card-3 img{
+    width: 100%;
+    height: 50%;
+}
+
+.card-3 h1{
+    padding: 10px 0px 8px 10px;
+    height: 15%;
+}
+
+.card-3 h2{
+    padding-left: 10px;
+    font-size: 1.3vw;
+    color: #00000080;
+    height: 20%;
+}
