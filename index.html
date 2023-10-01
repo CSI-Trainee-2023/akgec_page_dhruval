@@ -10,7 +10,7 @@
   <body>
     <div class="page">
       <div class="section-1">
-        <div class="navBar">
+        <div class="navBar fixed">
           <div class="uppernavBar">
             <div class="uppernavBar-left">
               <div class="akgec-logo">
@@ -64,13 +64,39 @@
             <button>AKGEC ERP LOGIN</button>
           </div>
         </div>
-        <div class="banner">
-          <img src="./Images/NAAC-Banner.png" alt="Image 1" class="slider" />
-          <img src="./Images/banner-2.png" alt="Image 2" class="slider" />
-          <img src="./Images/banner-3.png" alt="Image 3" class="slider" />
-          <img src="./Images/NAAC-Banner.png" alt="Image 4" class="slider" />
-          <div class="slider-dots"></div>
-        </div>
+
+        <section class="slider">
+          <!-- radio buttons start -->
+          <input type="radio" name="radio-btn" id="radio1" checked />
+          <input type="radio" name="radio-btn" id="radio2" />
+          <input type="radio" name="radio-btn" id="radio3" />
+          <input type="radio" name="radio-btn" id="radio4" />
+          <!-- radio buttons end -->
+          <!-- slides start -->
+          <ul class="slides">
+            <li class="slide">
+              <img src="./Images/NAAC-Banner.png" alt="Image 1" />
+            </li>
+            <li class="slide">
+              <img src="./Images/banner-2.png" alt="Image 2" />
+            </li>
+            <li class="slide">
+              <img src="./Images/banner-3.png" alt="Image 3" />
+            </li>
+            <li class="slide">
+              <img src="./Images/banner-4.jpg" alt="Image 4" />
+            </li>
+          </ul>
+          <!-- slides end -->
+          <!-- navigation start -->
+          <div class="navigation">
+            <label for="radio1" class="btn1" id="1"></label>
+            <label for="radio2" class="btn2" id="2"></label>
+            <label for="radio3" class="btn3" id="3"></label>
+            <label for="radio4" class="btn4" id="4"></label>
+          </div>
+          <!-- navigation end -->
+        </section>
       </div>
 
       <div class="section-2">
@@ -92,8 +118,9 @@
               in Automationand Robotics, Electronics & Communication
               Engineering, Computer Science, Electrical and Electronics
               Engineering and Mechanical Engineering.
+              Spread over 40 acre campus, AKGEC has excellent infrastructure with well-planned complexes for each department having spacious laboratories, class rooms equipped with state-of-the-art teaching aids, department libraries and faculty cabins. 
             </h3>
-            <button id="btn">Read More</button>
+            <input type="checkbox" id="btn" class="check" placeholder="Read More">
           </div>
           <div class="about-bottom">
             <div class="programs">
@@ -141,7 +168,7 @@
             </div>
           </div>
 
-          <div class="card-3">
+          <div class="card-1">
             <img src="./Images/M.Tech-img.jpg" alt="" />
             <h1>M.Tech</h1>
             <h2>CSE, ECE, ME, EN</h2>
@@ -480,6 +507,18 @@
         </div>
       </div>
     </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
+      integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"
+      integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <script src="script.js"></script>
   </body>
 </html>

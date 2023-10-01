@@ -24,6 +24,10 @@
   box-sizing: border-box;
 }
 
+:root{
+  --primaryColor: yellow;
+}
+
 html,
 body {
   width: 100%;
@@ -37,18 +41,27 @@ body {
 
 .section-1 {
   width: 100%;
-  height: 100vh;
-  display: block;
+  height: 80vh;
+  /* display: block; */
 }
 
 .navBar {
   width: 100%;
   height: 25%;
-  /* background-color: yellow; */
+  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
   align-items: top;
   justify-content: space-between;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  /* Add any other styles you want for the fixed navBar */
 }
 
 .uppernavBar {
@@ -58,7 +71,7 @@ body {
   align-items: center;
   /* justify-content: space-around; */
   font-family: InfriaSans-Regular;
-  /* background-color: red; */
+  background-color: white;
   padding: 0px 120px;
 }
 
@@ -139,6 +152,7 @@ body {
   width: 100%;
   height: 40%;
   background-color: #000000;
+  /* background: fixed; */
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -174,48 +188,99 @@ button {
 }
 
 button:hover{
+    border: 2px solid yellow;
     cursor: pointer;
+    color: white;
+    background-color: #000000;
 }
 
-.banner {
-  position: relative;
-  width: 100%;
-  height: 75%;
-  overflow: hidden;
-  /* margin: 0 auto; */
+ul {
+  list-style: none;
 }
 
 .slider {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  aspect-ratio: 1;
+  overflow: hidden;
+  cursor: grab;
+  margin-top: 13%;
+}
+
+.slider input {
+  display: none;
+}
+
+/* SLIDES */
+.slides {
+  position: absolute;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  display: flex;
+  transition: 0.2s;
+}
+
+.slide {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  object-fit: cover;
+}
+
+.slide img{
   width: 100%;
   height: 100%;
+}
+
+.slide h2 {
+  user-select: none;
+  color: var(--primaryColor);
+  height: 5rem;
+  width: 5rem;
+  font-size: 3rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  outline: 3px solid;
+}
+
+/* NAVIGATION */
+.navigation {
   position: absolute;
+  width: 100%;
+  bottom: 2.5rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.navigation label {
+  border: 2px solid var(--primaryColor);
+  padding: 0.3rem;
+  border-radius: 50%;
+  cursor: pointer;
   transition: 1s;
 }
 
-.slider img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+#radio1:checked ~ .navigation .btn1 {
+  background: var(--primaryColor);
 }
 
-.slider-dots {
-  text-align: center;
-  margin-top: 10px;
+#radio2:checked ~ .navigation .btn2 {
+  background: var(--primaryColor);
 }
 
-.slider-dot {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  margin: 0 5px;
-  cursor: pointer;
+#radio3:checked ~ .navigation .btn3 {
+  background: var(--primaryColor);
 }
 
-.slider-dot.active {
-  background-color: #333;
+#radio4:checked ~ .navigation .btn4 {
+  background: var(--primaryColor);
 }
+
 
 .section-2 {
   width: 100%;
@@ -271,25 +336,63 @@ button:hover{
 }
 
 .description {
-  font-family: InfriaSans-Regular;
+  font-family: InfriaSerif-Regular;
   width: 80%;
 }
 
 .description h3 {
-  font-weight: 500;
-  letter-spacing: 1px;
-  line-height: 28px;
+  line-height: 150%;
+  max-height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.description h3::before {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 100%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(to bottom, transparent, white);
+}
+
+.check {
+  appearance: none;
+  border: 1px solid black;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  margin-top: 1rem;
+  font-family: InfriaSans-Regular;
+}
+
+.check::before {
+  content: "Read more";
+}
+
+.check:checked::before {
+  content: "Read less";
+}
+
+.description h3:has(+ .check:checked) {
+  max-height: none;
+  background: white;
 }
 
 #btn {
   margin: 5% 0% 5% 0%;
   width: 140px;
-  background-color: white;
+  background: linear-gradient(to left, white 50%, yellow 50%) right;
+  background-size: 200%;
+  transition: .5s ease-out;
 }
 
 #btn:hover{
-    background-color: yellow;
-    cursor: pointer;
+  border: 2px solid black;
+  background-position: left;
+  color: black;
+  cursor: pointer;
 }
 
 .about-bottom {
@@ -312,7 +415,7 @@ button:hover{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #f7f5ca;
+  background-color: #f7f5ca18;
 }
 
 .section-3-head {
@@ -333,7 +436,7 @@ button:hover{
 .line {
   width: 80px;
   height: 8px;
-  background-color: yellow;
+  background-color: #e4b709;
   border-radius: 10px;
   margin-bottom: 10px;
 }
@@ -356,6 +459,7 @@ button:hover{
   border-radius: 10px;
   overflow: hidden;
   font-family: InfriaSerif-Bold;
+  border: 1px solid #e4b709;
 }
 
 .card-1 h1 {
@@ -400,6 +504,7 @@ button:hover{
   border-radius: 10px;
   overflow: hidden;
   font-family: InfriaSerif-Bold;
+  border: 1px solid #e4b709;
 }
 
 .card-2 img {
@@ -413,34 +518,6 @@ button:hover{
 }
 
 .card-2 h2 {
-  padding-left: 10px;
-  font-size: 1.3vw;
-  color: #00000080;
-  height: 20%;
-}
-
-.card-3 {
-  width: 28%;
-  height: 70%;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  overflow: hidden;
-  font-family: InfriaSerif-Bold;
-}
-
-.card-3 img {
-  width: 100%;
-  height: 50%;
-}
-
-.card-3 h1 {
-  padding: 10px 0px 8px 10px;
-  height: 15%;
-}
-
-.card-3 h2 {
   padding-left: 10px;
   font-size: 1.3vw;
   color: #00000080;
@@ -539,7 +616,7 @@ button:hover{
 .section-5 {
   width: 100%;
   height: 80vh;
-  background-color: #fcfbea;
+  background-color: #f7f5ca18;
   display: flex;
   flex-direction: column;
   align-items: center;
