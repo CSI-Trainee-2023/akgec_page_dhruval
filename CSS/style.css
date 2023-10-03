@@ -1,21 +1,21 @@
 @font-face {
   font-family: InfriaSans-Bold;
-  src: url(./fonts/Ubuntu-Bold.ttf);
+  src: url(../fonts/Ubuntu-Bold.ttf);
 }
 
 @font-face {
   font-family: InfriaSans-Regular;
-  src: url(./fonts/Ubuntu-Medium.ttf);
+  src: url(../fonts/Ubuntu-Medium.ttf);
 }
 
 @font-face {
   font-family: InfriaSerif-Bold;
-  src: url(./fonts/Ubuntu-Regular.ttf);
+  src: url(../fonts/Ubuntu-Regular.ttf);
 }
 
 @font-face {
   font-family: InfriaSerif-Regular;
-  src: url(./fonts/Ubuntu-Light.ttf);
+  src: url(../fonts/Ubuntu-Light.ttf);
 }
 
 * {
@@ -526,7 +526,7 @@ ul {
 }
 
 .parallax {
-  background-image: url("./Images/bg-building.jpg");
+  background-image: url("../Images/bg-building.jpg");
   min-height: 200px;
   background-attachment: fixed;
   background-position: center;

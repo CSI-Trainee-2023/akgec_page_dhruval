@@ -1,0 +1,272 @@
+@font-face {
+  font-family: InfriaSans-Bold;
+  src: url(../fonts/Ubuntu-Bold.ttf);
+}
+
+@font-face {
+  font-family: InfriaSans-Regular;
+  src: url(../fonts/Ubuntu-Medium.ttf);
+}
+
+@font-face {
+  font-family: InfriaSerif-Bold;
+  src: url(../fonts/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+  font-family: InfriaSerif-Regular;
+  src: url(../fonts/Ubuntu-Light.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: yellow;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+.navBar {
+  width: 100%;
+  height: 25%;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  align-items: top;
+  justify-content: space-between;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  /* Add any other styles you want for the fixed navBar */
+}
+
+.uppernavBar {
+  width: 100%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-around; */
+  font-family: InfriaSans-Regular;
+  background-color: white;
+  padding: 0px 120px;
+}
+
+.uppernavBar-left {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.akgec-logo {
+  width: 10%;
+  height: 10%;
+  object-fit: cover;
+  margin-right: 3%;
+}
+
+.akgec-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.college-name {
+  width: 90%;
+  display: block;
+}
+
+.college-name h1 {
+  font-weight: 500;
+  margin-bottom: 1%;
+}
+
+.college-location {
+  width: 100%;
+  display: flex;
+  gap: 2%;
+}
+
+.college-location h4 {
+  font-weight: 100;
+}
+
+#code {
+  font-weight: 600;
+}
+
+.uppernavBar-right {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.jublee-logo {
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+  margin-left: 20%;
+}
+
+.jublee-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.naac-logo {
+  width: 30%;
+  height: 30%;
+  object-fit: cover;
+}
+
+.naac-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.lowernavBar {
+  width: 100%;
+  height: 40%;
+  background-color: #000000;
+  /* background: fixed; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0px 120px;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+}
+
+.home a {
+  color: white;
+  text-decoration: none;
+  font-family: InfriaSans-regular;
+  font-size: large;
+}
+
+.home img {
+  width: 10px;
+  padding-top: 3px;
+}
+
+button {
+  padding: 10px;
+  font-family: InfriaSans-regular;
+  border-radius: 8px;
+  background-color: #fff500;
+  font-weight: 600;
+  margin-left: 10%;
+}
+
+button:hover {
+  border: 2px solid yellow;
+  cursor: pointer;
+  color: white;
+  background-color: #000000;
+}
+
+.about {
+  margin-top: 12.8%;
+  width: 100%;
+  height: 100%;
+}
+
+.yellow-line {
+  width: 100%;
+  height: 0.6vh;
+  background-color: yellow;
+}
+
+.about-head {
+  width: 100%;
+  height: 20vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-head h1 {
+  color: #fff;
+  font-family: InfriaSerif-Regular;
+  font-size: 2.4vw;
+}
+
+.about-des{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.about-des-head{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: InfriaSans-Regular;
+    font-weight: 300;
+    margin-top: 2%;
+}
+
+.about-des-head h1{
+    font-family: InfriaSans-Regular;
+    font-weight: 400;
+}
+
+.about-des-1{
+    margin-top: 2.8%;
+    width: 80%;
+    font-family: InfriaSerif-Regular;
+}
+
+.about-des-1 h3{
+    color: #0000009b;
+    letter-spacing: 1.5px;
+    font-size: 1vw;
+    line-height: 180%;
+}
+
+.about-des-2{
+    margin-top: 2%;
+    width: 80%;
+    font-family: InfriaSerif-Regular;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-line{
+    width: 20px;
+    background-color: #e4b709;
+    height: 120%;
+    border-radius: 4px;
+    margin-right: 20px;
+}
+
+.about-des-2 h3{
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+    line-height: 150%
+}
